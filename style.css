@@ -1,0 +1,81 @@
+:root {
+    --bg-color: rgb(93, 136, 195);
+    --accent-color-500: rgb(171, 207, 246);
+    --accent-color-300: rgb(209, 228, 253);
+    --accent-color-200:rgb(237, 245, 254);
+    --font-color-800:rgb(32, 59, 90);
+    --font-color-600:rgb(93, 136, 195);
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--accent-color-200);
+    padding: 50px 40px;
+    border-radius: 30px;
+}
+
+.display{
+    background-color: var(--accent-color-300);
+    color: var(--font-color-800);
+    width: 400px;
+    text-align: end;
+    overflow-wrap: break-word;
+    font-size: 3rem;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.buttons{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button{
+    font-size: 3rem;
+    border-radius: 30px;
+    border: none;
+    transition: all .2s ease-in-out;
+}
+
+[data-num]{
+    background-color: var(--accent-color-300);
+    color: var(--font-color-800);
+}
+
+
+[data-operator],[data-del],[data-all-clear],.accent-color{
+    background-color: var(--accent-color-500);
+    color: var(--font-color-600);
+}
+
+[data-equals]{
+    background-color: var(--bg-color);
+    color: var(--accent-color-200);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.scale{
+    transform: scale(1.1);
+}
